@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Master</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Dice roll 🎲</h1>
+    
+    <!-- Navbar -->
+    <div class="navbar" id="menu">
+        <ul class="menu">
+            <li><a href="index.html">Dice roll !</a></li>
+            <li><a href="question.html">Questions</a></li>
+        </ul>
+        <!-- Croissance du bouton de fermeture -->
+        <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger-button">
+        <span id="hamburger-icon">☰</span>
+    </button>
+
+    <div id="canvas-container"></div>
+    <button id="roll-button">Roll the dice !</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/dice.js"></script>
+</body>
+</html>
