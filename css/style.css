@@ -134,10 +134,7 @@ button:hover {
         height: auto; /* Maintenir les proportions */
     }
 
-    button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
+  
 }
 
 /* Réduction pour les très petits écrans */
@@ -150,20 +147,13 @@ button:hover {
         font-size: 1.5em;
     }
 
-    .navbar .menu a {
-        font-size: 0.9em;
-        padding: 8px;
-    }
+    
 
     #canvas-container {
         width: 100%; /* Utiliser toute la largeur */
         height: auto;
     }
 
-    button {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
 
     h1 {
         margin: 10px 0;
