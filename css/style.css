@@ -9,9 +9,8 @@ body {
     height: 100vh;
 }
 
-
 .navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -46,7 +45,6 @@ body {
     transition: background-color 0.2s ease, border-radius 0.2s ease; 
 }
 
-/* Effet de hover avec fade */
 .navbar .menu a:hover {
     background-color: #45a049;
     border-radius: 10px;
@@ -59,20 +57,17 @@ body {
     padding: 10px;
 }
 
-
 .hamburger {
-    position: fixed; 
-    top: 10px; 
-    left: 10px; 
+    position: fixed;
+    top: 10px;
+    left: 10px;
     font-size: 2em;
     background: none;
     border: none;
     color: black;
     cursor: pointer;
-    z-index: 1100; 
+    z-index: 1100;
 }
-
-
 
 .close-icon {
     position: absolute;
@@ -85,11 +80,9 @@ body {
     cursor: pointer;
 }
 
-
 .navbar.active {
     transform: translateX(0); 
 }
-
 
 h1 {
     text-align: center;
@@ -109,7 +102,7 @@ h1 {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
@@ -120,4 +113,60 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+/* ===================
+   Responsive Design
+   =================== */
+
+/* Réduction pour les écrans étroits */
+@media (max-width: 768px) {
+    .navbar {
+        width: 200px;
+    }
+
+    .navbar .menu a {
+        font-size: 1em;
+    }
+
+    #canvas-container {
+        width: 90%; /* Adapter à la largeur de l'écran */
+        height: auto; /* Maintenir les proportions */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Réduction pour les très petits écrans */
+@media (max-width: 480px) {
+    .navbar {
+        width: 150px;
+    }
+
+    .hamburger {
+        font-size: 1.5em;
+    }
+
+    .navbar .menu a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    #canvas-container {
+        width: 100%; /* Utiliser toute la largeur */
+        height: auto;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
 }

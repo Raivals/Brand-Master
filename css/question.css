@@ -78,7 +78,7 @@ a {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
-        height: 60%;
+        height: 80%;
     }
 
     .card {
