@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    text-align: center;
+    position: relative;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease-in-out;
+}
+
+.card-front {
+    background-color: #f9f9f9;
+    flex-direction: column;
+    /* padding: 10px; */
+}
+
+.card-back {
+    background-color: #e0f7fa;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    /* padding: 10px; */
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+#question-number {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+#question-minus {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+#answer {
+    /* font-size: 1.5rem; */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px; 
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4CAF50;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 250px; 
+        height: 350px;
+    }
+    
+    #question-number {
+        font-size: 1.2rem;
+        right: 10px;
+        bottom: 0;
+    }
+    
+    #answer {
+        /* font-size: 1rem;  */
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .card {
+        width: 200px; 
+        height: 300px;
+    }
+
+    #question-number {
+        font-size: 1rem;
+        right: 5px;
+    }
+
+    #answer {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px; 
+    }
+}
