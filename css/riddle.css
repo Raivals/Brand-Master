@@ -123,10 +123,7 @@ button:hover {
         padding: 10px;
     }
 
-    button {
-        font-size: 0.9rem;
-        padding: 8px 16px; 
-    }
+    
 }
 
 
@@ -145,8 +142,5 @@ button:hover {
         padding: 8px;
     }
 
-    button {
-        font-size: 0.8rem;
-        padding: 6px 12px; 
-    }
+  
 }
