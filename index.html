@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <div class="navbar" id="menu">
         <ul class="menu">
-            <li><a href="dice.html">Dice roll !</a></li>
+            <li><a href="#" id="dice-link">Dice roll !</a></li>
             <li><a href="index.html">Questions</a></li>
             <li><a href="#" id="rules-link">Rules</a></li>
         </ul>
@@ -33,6 +33,13 @@
             <iframe src="./assets/2_Prise_en_main_FIGMA.pdf" id="rules-pdf"></iframe>
         </div>
     </div>
+
+    <div class="modal" id="dice-modal">
+    <div class="modal-content">
+        <span class="close" id="close-dice-modal">&times;</span>
+        <iframe src="dice.html" id="dice-iframe"></iframe>
+    </div>
+</div>
 
     <div class="container">
         <!-- Carte Riddle -->
@@ -163,6 +170,30 @@ window.addEventListener('click', (e) => {
         rulesModal.style.display = 'none';
     }
 });
+
+// Références aux éléments
+const diceLink = document.getElementById('dice-link');
+const diceModal = document.getElementById('dice-modal');
+const closeDiceModal = document.getElementById('close-dice-modal');
+
+// Ouvrir le modal
+diceLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+    diceModal.style.display = 'flex';
+});
+
+// Fermer le modal
+closeDiceModal.addEventListener('click', () => {
+    diceModal.style.display = 'none';
+});
+
+// Fermer le modal si on clique à l'extérieur du contenu
+window.addEventListener('click', (e) => {
+    if (e.target === diceModal) {
+        diceModal.style.display = 'none';
+    }
+});
+
     </script>
 </body>
 </html>
