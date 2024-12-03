@@ -35,6 +35,16 @@
         document.getElementById('answer').textContent = data.answer;
         document.getElementById('plus-value').textContent = `+${data.plusValue}`;
     });
+    // Attendez que le DOM soit prêt
+    document.addEventListener('DOMContentLoaded', function () {
+        const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
+        
+        // Ajoutez un gestionnaire d'événements au clic
+        card.addEventListener('click', function () {
+            // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
+            card.classList.toggle('flipped');
+        });
+    });
     </script>
   
 </body>
