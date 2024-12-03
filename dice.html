@@ -14,6 +14,7 @@
         <ul class="menu">
             <li><a href="dice.html">Dice roll !</a></li>
             <li><a href="index.html">Questions</a></li>
+            <li><a href="#" id="rules-link">Rules</a></li>
         </ul>
         <!-- Croissance du bouton de fermeture -->
         <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
@@ -24,11 +25,41 @@
         <span id="hamburger-icon">☰</span>
     </button>
 
+    <div class="modal" id="rules-modal">
+        <div class="modal-content">
+            <span class="close" id="close-rules-modal">&times;</span>
+            <iframe src="./assets/2_Prise_en_main_FIGMA.pdf" id="rules-pdf"></iframe>
+        </div>
+    </div>
+
     <div id="canvas-container"></div>
     <button id="roll-button">Roll the dice !</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/dice.js"></script>
+    <script>
+        const rulesLink = document.getElementById('rules-link');
+const rulesModal = document.getElementById('rules-modal');
+const closeRulesModal = document.getElementById('close-rules-modal');
+
+// Ouvrir le modal
+rulesLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+    rulesModal.style.display = 'flex';
+});
+
+// Fermer le modal
+closeRulesModal.addEventListener('click', () => {
+    rulesModal.style.display = 'none';
+});
+
+// Fermer le modal si on clique à l'extérieur du contenu
+window.addEventListener('click', (e) => {
+    if (e.target === rulesModal) {
+        rulesModal.style.display = 'none';
+    }
+});
+    </script>
 </body>
 </html>
