@@ -44,3 +44,34 @@ iframe {
 }
 
 
+#timer-display {
+    margin-top: 100px !important;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.timer-buttons {
+    display: flex;
+    flex-direction: column; /* Les boutons sont empilés verticalement */
+    gap: 10px; /* Ajoute de l'espace entre les boutons */
+    width: 100%; /* Les boutons prennent toute la largeur disponible */
+    align-items: center; /* Centre les boutons horizontalement */
+}
+
+.timer-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #97B652;
+    color: white;
+    text-align: center;
+    width: auto; /* Ajuste la largeur pour qu'elle s'adapte au contenu */
+}
+
+.timer-buttons button:hover {
+    background-color: #88A346; /* Change légèrement la couleur au survol */
+}

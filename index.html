@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/question.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/modal.css">
+    
    
 </head>
 <body>
@@ -18,6 +19,7 @@
             <li><a href="#" id="dice-link">Dice roll !</a></li>
             <li><a href="index.html">Questions</a></li>
             <li><a href="#" id="rules-link">Rules</a></li>
+            <li><a href="#" id="timer-link">Timer</a></li>
         </ul>
         <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
     </div>
@@ -35,11 +37,20 @@
     </div>
 
     <div class="modal" id="dice-modal">
-    <div class="modal-content">
-        <span class="close" id="close-dice-modal">&times;</span>
-        <iframe src="dice.html" id="dice-iframe"></iframe>
+        <div class="modal-content">
+            <span class="close" id="close-dice-modal">&times;</span>
+            <iframe src="dice.html" id="dice-iframe"></iframe>
+        </div>
     </div>
-</div>
+    <div class="modal" id="timer-modal">
+        <div class="modal-content">
+            <span class="close" id="close-timer-modal">&times;</span>
+            <h2 id="timer-display">00:00</h2>
+            <div class="timer-buttons">
+                <button id="start-1min">Start 1 Minute</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <!-- Carte Riddle -->
@@ -148,51 +159,52 @@
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/questions.js"></script>
+    <script src="./js/timer.js"></script>
     <script>
         const rulesLink = document.getElementById('rules-link');
-const rulesModal = document.getElementById('rules-modal');
-const closeRulesModal = document.getElementById('close-rules-modal');
+        const rulesModal = document.getElementById('rules-modal');
+        const closeRulesModal = document.getElementById('close-rules-modal');
 
-// Ouvrir le modal
-rulesLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Empêche le comportement par défaut du lien
-    rulesModal.style.display = 'flex';
-});
+        // Ouvrir le modal
+        rulesLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            rulesModal.style.display = 'flex';
+        });
 
-// Fermer le modal
-closeRulesModal.addEventListener('click', () => {
-    rulesModal.style.display = 'none';
-});
+        // Fermer le modal
+        closeRulesModal.addEventListener('click', () => {
+            rulesModal.style.display = 'none';
+        });
 
-// Fermer le modal si on clique à l'extérieur du contenu
-window.addEventListener('click', (e) => {
-    if (e.target === rulesModal) {
-        rulesModal.style.display = 'none';
-    }
-});
+        // Fermer le modal si on clique à l'extérieur du contenu
+        window.addEventListener('click', (e) => {
+            if (e.target === rulesModal) {
+                rulesModal.style.display = 'none';
+            }
+        });
 
-// Références aux éléments
-const diceLink = document.getElementById('dice-link');
-const diceModal = document.getElementById('dice-modal');
-const closeDiceModal = document.getElementById('close-dice-modal');
+        // Références aux éléments
+        const diceLink = document.getElementById('dice-link');
+        const diceModal = document.getElementById('dice-modal');
+        const closeDiceModal = document.getElementById('close-dice-modal');
 
-// Ouvrir le modal
-diceLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Empêche le comportement par défaut du lien
-    diceModal.style.display = 'flex';
-});
+        // Ouvrir le modal
+        diceLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            diceModal.style.display = 'flex';
+        });
 
-// Fermer le modal
-closeDiceModal.addEventListener('click', () => {
-    diceModal.style.display = 'none';
-});
+        // Fermer le modal
+        closeDiceModal.addEventListener('click', () => {
+            diceModal.style.display = 'none';
+        });
 
-// Fermer le modal si on clique à l'extérieur du contenu
-window.addEventListener('click', (e) => {
-    if (e.target === diceModal) {
-        diceModal.style.display = 'none';
-    }
-});
+        // Fermer le modal si on clique à l'extérieur du contenu
+        window.addEventListener('click', (e) => {
+            if (e.target === diceModal) {
+                diceModal.style.display = 'none';
+            }
+        });
 
     </script>
 </body>
