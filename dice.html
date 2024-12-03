@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Master</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
     <h1>Dice roll 🎲</h1>
@@ -40,25 +41,25 @@
     <script src="./js/dice.js"></script>
     <script>
         const rulesLink = document.getElementById('rules-link');
-const rulesModal = document.getElementById('rules-modal');
-const closeRulesModal = document.getElementById('close-rules-modal');
+        const rulesModal = document.getElementById('rules-modal');
+        const closeRulesModal = document.getElementById('close-rules-modal');
 
-// Ouvrir le modal
-rulesLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Empêche le comportement par défaut du lien
-    rulesModal.style.display = 'flex';
-});
+        // Ouvrir le modal
+        rulesLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            rulesModal.style.display = 'flex';
+        });
 
-// Fermer le modal
-closeRulesModal.addEventListener('click', () => {
-    rulesModal.style.display = 'none';
-});
+        // Fermer le modal
+        closeRulesModal.addEventListener('click', () => {
+            rulesModal.style.display = 'none';
+        });
 
-// Fermer le modal si on clique à l'extérieur du contenu
-window.addEventListener('click', (e) => {
-    if (e.target === rulesModal) {
-        rulesModal.style.display = 'none';
-    }
+        // Fermer le modal si on clique à l'extérieur du contenu
+        window.addEventListener('click', (e) => {
+            if (e.target === rulesModal) {
+                rulesModal.style.display = 'none';
+            }
 });
     </script>
 </body>
