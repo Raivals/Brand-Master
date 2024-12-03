@@ -60,7 +60,7 @@ h3 {
     position: absolute;
     bottom: 0;
     right: 20px;
-    color: #4CAF50;
+    color: #97B652;
     font-weight: bold;
 }
 
@@ -82,7 +82,7 @@ h3 {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #97B652;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -94,7 +94,7 @@ button {
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #97B652;
 }
 
 

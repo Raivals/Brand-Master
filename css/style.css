@@ -32,13 +32,14 @@ body {
 
 .navbar .menu ul {
     padding: 0;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .navbar .menu li {
     margin: 5px 0;
     list-style-type: none;
     padding: 10px;
+    font-weight: bold;
 }
 
 .navbar .menu a {
@@ -46,7 +47,7 @@ body {
 }
 
 .navbar .menu a:hover {
-    background-color: #45a049;
+    background-color: #97B652;
     border-radius: 10px;
 }
 
@@ -100,10 +101,10 @@ h1 {
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 1.2rem;
-    background-color: #4CAF50;
+    background-color: #97B652;
     color: white;
     font-weight: bold;
     border: none;
@@ -112,36 +113,26 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #97B652;
 }
 
-/* ===================
-   Responsive Design
-   =================== */
 
-/* Réduction pour les écrans étroits */
 @media (max-width: 768px) {
-    .navbar {
-        width: 200px;
-    }
 
     .navbar .menu a {
         font-size: 1em;
     }
 
     #canvas-container {
-        width: 90%; /* Adapter à la largeur de l'écran */
-        height: auto; /* Maintenir les proportions */
+        width: 90%;
+        height: auto; 
     }
 
   
 }
 
-/* Réduction pour les très petits écrans */
+
 @media (max-width: 480px) {
-    .navbar {
-        width: 150px;
-    }
 
     .hamburger {
         font-size: 1.5em;
@@ -150,7 +141,7 @@ button:hover {
     
 
     #canvas-container {
-        width: 100%; /* Utiliser toute la largeur */
+        width: 100%; 
         height: auto;
     }
 

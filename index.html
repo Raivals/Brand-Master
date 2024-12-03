@@ -5,30 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Master</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    
 </head>
 <body>
-    <h1>Dice roll 🎲</h1>
-    
     <!-- Navbar -->
     <div class="navbar" id="menu">
         <ul class="menu">
-            <li><a href="index.html">Dice roll !</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dice.html">Dice roll !</a></li>
             <li><a href="question.html">Questions</a></li>
         </ul>
-        <!-- Croissance du bouton de fermeture -->
+        
         <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
     </div>
 
-    <!-- Hamburger Button -->
+   
     <button class="hamburger" id="hamburger-button">
         <span id="hamburger-icon">☰</span>
     </button>
+    <header>
+    <h1>Brand Master</h1>
+    <p>Lancez vos dés, relevez les défis, et devenez le maître !</p>
+</header>
 
-    <div id="canvas-container"></div>
-    <button id="roll-button">Roll the dice !</button>
+<div class="hero">
+    <!-- <img src="images/dice-hero.png" alt="Dé interactif"> -->
+    <h2>Votre aventure commence ici</h2>
+    <p>Découvrez un jeu stratégique et interactif où chaque lancer peut changer le cours du jeu. Créez des moments inoubliables avec vos amis.</p>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <div class="features">
+        <div class="feature">
+            <img src="images/strategy-icon.png" alt="Stratégie">
+            <div>
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="images/interaction-icon.png" alt="Interaction">
+            <div>
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="images/score-icon.png" alt="Scores">
+            <div>
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <button id="start-game">Start the game</button>
+    </div>
+    
     <script src="./js/menu.js"></script>
-    <script src="./js/dice.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

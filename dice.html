@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Master</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mcq.css">
 </head>
 <body>
-    <h1>Which one is true ?</h1>
+    <h1>Dice roll 🎲</h1>
     
     <!-- Navbar -->
     <div class="navbar" id="menu">
@@ -26,23 +25,10 @@
         <span id="hamburger-icon">☰</span>
     </button>
 
-    <div class="card-container">
-        <div class="card" id="question-card">
-            <div class="card-front">
-                <h3 id="question"></h3>
-                <p>"Click me to see the answer"</p>
-                <p id="question-number">+1</p>
-            </div>
-            <div class="card-back">
-                <h3 id="answer"></h3>
-                <p>"Click me to see the question"</p>
-            </div>
-        </div>
-        <button id="change-question">Next question</button>
-    </div>
+    <div id="canvas-container"></div>
+    <button id="roll-button">Roll the dice !</button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="./js/menu.js"></script>
-    <script src="./js/questions.js"></script>
-  
 </body>
 </html>
