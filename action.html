@@ -9,23 +9,6 @@
 </head>
 <body>
     <h1>Action</h1>
-    
-    <!-- Navbar -->
-    <div class="navbar" id="menu">
-        <ul class="menu">
-            <li><a href="index.html">Home & Rules</a></li>
-            <li><a href="dice.html">Dice roll !</a></li>
-            <li><a href="question.html">Questions</a></li>
-        </ul>
-        <!-- Croissance du bouton de fermeture -->
-        <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
-    </div>
-
-    <!-- Hamburger Button -->
-    <button class="hamburger" id="hamburger-button">
-        <span id="hamburger-icon">☰</span>
-    </button>
-
     <div class="card-container">
         <div class="card" id="question-card">
             <div class="card-front">
@@ -34,11 +17,19 @@
             </div>
           
         </div>
-        <button id="change-question">Next question</button>
     </div>
 
     <script src="./js/menu.js"></script>
     <script src="./js/questions.js"></script>
-  
+    <script>
+    window.addEventListener('message', function (event) {
+        if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
+
+        const data = event.data;
+        document.getElementById('question').textContent = data.question;
+        document.getElementById('answer').textContent = data.answer;
+        document.getElementById('plus-value').textContent = `+${data.plusValue}`;
+    });
+    </script>
 </body>
 </html>
