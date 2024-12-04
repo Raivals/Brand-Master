@@ -74,6 +74,7 @@ h3 {
     font-size: 15px;
 }
 
+
 #question-number {
     font-size: 1.5rem;
     position: absolute;
@@ -171,6 +172,7 @@ button:hover {
     
     #answer {
         padding: 10px;
+        color: white;
     }
     
     .timer-container {
@@ -183,8 +185,8 @@ button:hover {
 
 @media (max-width: 480px) {
     .card {
-        width: 250px;
-        height: 350px;
+        width: 300px;
+        height: 400px;
     }
 
     #question-number {
