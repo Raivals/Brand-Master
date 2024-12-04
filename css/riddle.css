@@ -154,10 +154,10 @@ button:hover {
 /* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
     .card-front {
-        background-position: 1ch -6ch;
+        background-position: 1ch -8ch;
     }
     .card-back {
-        background-position: 1ch -6ch;
+        background-position: 1ch -8ch;
     }
     .card-container {
         display: flex;
