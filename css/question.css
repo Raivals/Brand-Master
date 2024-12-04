@@ -12,7 +12,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les grands écrans */
-    gap: 100px;
+    gap: 70px;
     /* width: 80%; */
     max-width: 1200px;
 }

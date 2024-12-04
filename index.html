@@ -13,89 +13,46 @@
 <body>
     <h1>Brand Master</h1>
     
-    <!-- Navbar -->
-    <div class="navbar" id="menu">
-        <ul class="menu">
-            <li><a href="#" id="dice-link">Dice roll !</a></li>
-            <li><a href="index.html">Questions</a></li>
-            <li><a href="#" id="rules-link">Rules</a></li>
-        </ul>
-        <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
-    </div>
-
-    <!-- Hamburger Button -->
-    <button class="hamburger" id="hamburger-button">
-        <span id="hamburger-icon">☰</span>
-    </button>
-
-    <div class="modal" id="rules-modal">
-        <div class="modal-content">
-            <span class="close" id="close-rules-modal">&times;</span>
-            <iframe src="./assets/2_Prise_en_main_FIGMA.pdf" id="rules-pdf"></iframe>
-        </div>
-    </div>
-
-    <div class="modal" id="dice-modal">
-        <div class="modal-content">
-            <span class="close" id="close-dice-modal">&times;</span>
-            <iframe src="dice.html" id="dice-iframe"></iframe>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Carte Riddle -->
         <a href="#" id="riddle-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/riddle.png" alt="Riddle">
-                <!-- <h3>Riddle</h3>
-                <p>Find the answer within 1 minute (infinite tries)</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/riddle.png" alt="Riddle">
         </a>
         
         <!-- Carte Bonus & Malus -->
         <a href="#" id="bonus-malus-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/luck.png" alt="Bonus and Malus">
-                <!-- <h3>Luck</h3>
-                <p>Basically a good or bad thing happening to you in the game</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/luck.png" alt="Bonus and Malus">   
         </a>
 
         <!-- Carte Action -->
         <a href="#" id="action-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/action.png" alt="Action">
-                <!-- <h3>Action</h3>
-                <p>1 minute timer, the first other player to guess benefits with you</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/action.png" alt="Action">    
         </a>
 
         <!-- Quiz -->
         <a href="#" id="mcq-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/quizz.png" alt="Which one is true ?">
-                <!-- <h3>Quiz</h3>
-                <p>A multiple choice question, 1 try, no joker</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/quizz.png" alt="Which one is true ?">  
         </a>
 
         <!-- Carte Sabotage -->
         <a href="#" id="sabotage-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/sabotage.png" alt="Sabotage">
-                <!-- <h3>Sabotage</h3>
-                <p>A bad effect to use against another player you choose</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/sabotage.png" alt="Sabotage">
         </a>
 
         <!-- Carte Challenge -->
         <a href="#" id="challenge-link">
-            <!-- <div class="card"> -->
-                <img class="card" src="./assets/duel.svg" alt="Challenge">
-                <!-- <h3>Duel</h3>
-                <p>Challenge 1 player of your choice to any of the 3 mini-games!</p> -->
-            <!-- </div> -->
+            <img class="card" src="./assets/duel.svg" alt="Challenge">
         </a>
+
+        <a href="#" id="dice-link">
+            <img class="card" src="./assets/dice.svg" alt="dice roll">
+        </a>
+
+        <a href="#" id="rules-link">
+            <img class="card" src="./assets/riddle.png" alt="rules">
+        </a>
+
     </div>
 
     <!-- Modal pour Riddle -->
@@ -143,6 +100,20 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <iframe src="challenge.html" id="challenge-iframe"></iframe>
+        </div>
+    </div>
+    <!-- Modal pour Regles -->
+    <div class="modal" id="rules-modal">
+        <div class="modal-content">
+            <span class="close" id="close-rules-modal">&times;</span>
+            <iframe src="./assets/2_Prise_en_main_FIGMA.pdf" id="rules-pdf"></iframe>
+        </div>
+    </div>
+    <!-- Modal pour Dice roll -->
+    <div class="modal" id="dice-modal">
+        <div class="modal-content">
+            <span class="close" id="close-dice-modal">&times;</span>
+            <iframe src="dice.html" id="dice-iframe"></iframe>
         </div>
     </div>
 
