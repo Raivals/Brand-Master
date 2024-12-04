@@ -3,9 +3,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    flex-direction: column; /* Alignement vertical des éléments */
 }
 
 .card-container {
@@ -16,9 +16,9 @@ body {
 .card {
     width: 300px;
     height: 400px;
-    perspective: 1000px; 
+    perspective: 1000px;
     margin-bottom: 20px;
-    /* cursor: pointer; */
+    cursor: pointer;
     padding: 10px;
 }
 
@@ -41,16 +41,21 @@ body {
 .card-front {
     background-color: #f9f9f9;
     flex-direction: column;
-    /* padding: 10px; */
 }
 
 .card-back {
     background-color: #e0f7fa;
     flex-direction: column;
     transform: rotateY(180deg);
-    /* padding: 10px; */
 }
 
+.card.flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0deg);
+}
 
 h3 {
     margin: 20px 0;
@@ -61,21 +66,11 @@ h3 {
     position: absolute;
     bottom: 0;
     right: 20px;
-    color: #97B652;
-    font-weight: bold;
-}
-
-#question-minus {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: red;
+    color: #4CAF50;
     font-weight: bold;
 }
 
 #answer {
-    /* font-size: 1.5rem; */
     color: #333;
     text-align: center;
     padding: 20px;
@@ -90,35 +85,79 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px; 
+    margin-top: 20px;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #97B652;
+    background-color: #88A346;
 }
 
+/* .timer-container {
+    position: fixed;
+    top: 35px;
+    left: 10px;
+    padding: 15px;
+} */
 
+#timer-display {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer-buttons {
+    display: flex;
+    flex-direction: row; /* Alignement horizontal des boutons */
+    gap: 10px;
+    align-items: center;
+}
+
+.timer-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #97B652;
+    color: white;
+    text-align: center;
+}
+
+.timer-buttons button:hover {
+    background-color: #88A346;
+}
+
+/* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
-  
+    .card-container {
+        display: flex;
+        flex-direction: column; /* Alignement vertical pour les petits écrans */
+        align-items: center;
+    }
     
     #question-number {
         font-size: 1.2rem;
         right: 10px;
-        bottom: 0;
     }
     
     #answer {
-        /* font-size: 1rem;  */
+        padding: 10px;
+    }
+    
+    .timer-container {
+        position: static; /* Le timer passe sous les cartes */
         padding: 10px;
     }
 
-   
+    
 }
 
-
 @media (max-width: 480px) {
-  
+    .card {
+        width: 200px;
+        height: 300px;
+    }
 
     #question-number {
         font-size: 1rem;
@@ -129,5 +168,7 @@ button:hover {
         padding: 8px;
     }
 
-   
+    .timer-container {
+        padding: 10px;
+    }
 }
