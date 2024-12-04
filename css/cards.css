@@ -4,10 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: linear-gradient(to right, #5c7987, #3a4c54);
-    
+    /* background: linear-gradient(to right, #5c7987, #3a4c54); */
+
     flex-direction: column; /* Alignement vertical des éléments */
-    color: white;
+    color: black;
 }
 
 .card-container {
@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #5c7987;
+    background-color:  #f0e7b1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.6s ease-in-out;
@@ -44,7 +44,7 @@ body {
 
 .card-front {
     /* background-color: #5c7987 ; */
-    background-image: url(../assets/logo.svg);
+    background-image: url(../assets/logov2.svg);
     background-size:contain; 
     background-position: 1ch -10ch;
     background-repeat: no-repeat; 
@@ -53,9 +53,9 @@ body {
 }
 
 .card-back {
-    background-image: url(../assets/logo.svg);
+    background-image: url(../assets/logov2.svg);
     background-size:contain; 
-    background-position: 1ch -10ch;
+    background-position: 0 -10ch;
     background-repeat: no-repeat; 
     flex-direction: column;
     transform: rotateY(180deg);
@@ -95,7 +95,7 @@ h3 {
 }
 
 #answer {
-    color: white;
+    color: black;
     text-align: center;
     padding: 20px;
     font-weight: bold;
@@ -155,10 +155,10 @@ button:hover {
 /* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
     .card-front {
-        background-position: 1ch -8ch;
+        background-position: 0-8ch;
     }
     .card-back {
-        background-position: 1ch -8ch;
+        background-position: 0 -8ch;
     }
     .card-container {
         display: flex;
@@ -170,7 +170,7 @@ button:hover {
     
     #answer {
         padding: 10px;
-        color: white;
+        color: black;
     }
     
     .timer-container {
