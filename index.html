@@ -19,7 +19,6 @@
             <li><a href="#" id="dice-link">Dice roll !</a></li>
             <li><a href="index.html">Questions</a></li>
             <li><a href="#" id="rules-link">Rules</a></li>
-            <li><a href="#" id="timer-link">Timer</a></li>
         </ul>
         <button class="close-icon" id="close-icon" style="display: none;">&times;</button>
     </div>
@@ -42,21 +41,12 @@
             <iframe src="dice.html" id="dice-iframe"></iframe>
         </div>
     </div>
-    <div class="modal" id="timer-modal">
-        <div class="modal-content">
-            <span class="close" id="close-timer-modal">&times;</span>
-            <h2 id="timer-display">00:00</h2>
-            <div class="timer-buttons">
-                <button id="start-1min">Start 1 Minute</button>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Carte Riddle -->
         <a href="#" id="riddle-link">
             <div class="card">
-                <img src="./assets/Icons-07.png" alt="Riddle">
+                <img src="./assets/riddle.png" alt="Riddle">
                 <h3>Riddle</h3>
                 <p>Answer this riddle for a bonus ! Be careful if you answer incorrectly..</p>
             </div>
@@ -65,7 +55,7 @@
         <!-- Carte Bonus & Malus -->
         <a href="#" id="bonus-malus-link">
             <div class="card">
-                <img src="./assets/Icons-11.png" alt="Bonus and Malus">
+                <img src="./assets/luck.png" alt="Bonus and Malus">
                 <h3>Luck</h3>
                 <p>Draw a card. Good luck...</p>
             </div>
@@ -74,7 +64,7 @@
         <!-- Carte Action -->
         <a href="#" id="action-link">
             <div class="card">
-                <img src="./assets/Icons-10.png" alt="Action">
+                <img src="./assets/action.png" alt="Action">
                 <h3>Action</h3>
                 <p>Succeed in this challenge !</p>
             </div>
@@ -83,7 +73,7 @@
         <!-- Carte Which One Is True -->
         <a href="#" id="mcq-link">
             <div class="card">
-                <img src="./assets/Icons-09.png" alt="Which one is true ?">
+                <img src="./assets/quizz.png" alt="Which one is true ?">
                 <h3>Quizz</h3>
                 <p>Try to get the good answer</p>
             </div>
@@ -92,7 +82,7 @@
         <!-- Carte Sabotage -->
         <a href="#" id="sabotage-link">
             <div class="card">
-                <img src="./assets/Icons-12.png" alt="Sabotage">
+                <img src="./assets/sabotage.png" alt="Sabotage">
                 <h3>Sabotage</h3>
                 <p>Sabotage your opponents' efforts.</p>
             </div>
@@ -101,7 +91,7 @@
         <!-- Carte Challenge -->
         <a href="#" id="challenge-link">
             <div class="card">
-                <img src="./assets/Icons-08.png" alt="Challenge">
+                <img src="./assets/challenge.png" alt="Challenge">
                 <h3>Challenge</h3>
                 <p>1 vs 1, the fastest wins !</p>
             </div>
@@ -205,7 +195,6 @@
                 diceModal.style.display = 'none';
             }
         });
-
     </script>
 </body>
 </html>
