@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+
     <!-- Timer intégré sous les cartes -->
     <div class="timer-container">
         <h2 id="timer-display">00:00</h2>
@@ -34,71 +35,78 @@
         </div>
     </div>
 
-    <script src="./js/menu.js"></script>
-    <script src="./js/questions.js"></script>
     <script>
         window.addEventListener('message', function (event) {
             if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
-
+            
             const data = event.data;
             document.getElementById('question').textContent = data.question;
             document.getElementById('answer').textContent = data.answer;
             document.getElementById('question-number').textContent = data.plusValue;
             document.getElementById('question-number-minus').textContent = data.minusValue;
         });
+        
         // Attendez que le DOM soit prêt
         document.addEventListener('DOMContentLoaded', function () {
             const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
-            
             // Ajoutez un gestionnaire d'événements au clic
             card.addEventListener('click', function () {
                 // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
                 card.classList.toggle('flipped');
             });
         });
-    </script>
-    <script>
-    // Gestion du timer
-    let timerInterval; // Variable pour l'intervalle du timer
-    let timeLeft = 60; // Temps initial, 1 minute
-    const timerDisplay = document.getElementById('timer-display');
 
-    // Fonction pour mettre à jour l'affichage du timer
-    function updateTimerDisplay() {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    }
+        // Gestion du timer
+        let timerInterval; // Variable pour l'intervalle du timer
+        let timeLeft = 60; // Temps initial, 1 minute
+        const timerDisplay = document.getElementById('timer-display');
+        const startButton = document.getElementById('start-1min');
+        const resetButton = document.getElementById('reset-timer');
+        
+        // Fonction pour mettre à jour l'affichage du timer
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        // Fonction pour démarrer le timer
+        function startTimer() {
+            if (timerInterval) return; // Si un timer est déjà en cours, ne rien faire
+            startButton.disabled = true; // Désactive le bouton Start
+            timerInterval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval); // Arrêter le timer lorsqu'il atteint 0
+                    startButton.disabled = false; // Réactive le bouton Start
+                } else {
+                    timeLeft--; // Décrémenter le temps restant
+                    updateTimerDisplay(); // Mettre à jour l'affichage du timer
+                }
+            }, 1000);
+        }
 
-    // Fonction pour démarrer le timer
-    function startTimer() {
-        timerInterval = setInterval(() => {
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval); // Arrêter le timer lorsqu'il atteint 0
-            } else {
-                timeLeft--; // Décrémenter le temps restant
-                updateTimerDisplay(); // Mettre à jour l'affichage du timer
-            }
-        }, 1000);
-    }
-
-    // Fonction pour réinitialiser le timer
-    function resetTimer() {
-        clearInterval(timerInterval); // Arrêter l'intervalle en cours
-        timeLeft = 60; // Réinitialiser le temps à 1 minute
-        updateTimerDisplay(); // Réinitialiser l'affichage
-    }
-
-    // Démarrer le timer lorsque le bouton Start est cliqué
-    document.getElementById('start-1min').addEventListener('click', () => {
-        startTimer();
-    });
-
-    // Réinitialiser le timer lorsque le bouton Reset est cliqué
-    document.getElementById('reset-timer').addEventListener('click', () => {
-        resetTimer();
-    });
-    </script>
-
+        // Fonction pour réinitialiser le timer
+        function resetTimer() {
+            clearInterval(timerInterval); // Arrêter l'intervalle en cours
+            timeLeft = 60; // Réinitialiser le temps à 1 minute
+            updateTimerDisplay(); // Réinitialiser l'affichage
+            startButton.disabled = false; // Réactive le bouton Start
+        }
+        
+        // Démarrer le timer lorsque le bouton Start est cliqué
+        startButton.addEventListener('click', () => {
+            startTimer();
+        });
+        
+        // Réinitialiser le timer lorsque le bouton Reset est cliqué
+        resetButton.addEventListener('click', () => {
+            resetTimer();
+        });
+        
+        // Initialiser l'affichage du timer
+        updateTimerDisplay();
+        </script>
+        <script src="./js/menu.js"></script>
+        <script src="./js/questions.js"></script>
 </body>
 </html>

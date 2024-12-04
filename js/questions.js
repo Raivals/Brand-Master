@@ -9,8 +9,8 @@ const categories = {
         { question: "Si tu perds, tu dois réduire tes points. Qu'est-ce que tu choisis ?", answer: "Un malus.", plusValue: 2, minusValue: -1 }
     ],
     action: [
-        { question: "Effectue 10 pompes.", answer: "Fais 10 pompes!", plusValue: 1, minusValue: -1 },
-        { question: "Fais un tour sur toi-même et décris ce que tu vois.", answer: "Effectue un tour sur toi-même!", plusValue: 1, minusValue: -1 }
+        { question: "The one and only why played can read this card", answer: "Fais 10 pompes!", plusValue: 1, minusValue: -1 },
+        { question: "The one and only why played can read this card", answer: "Effectue un tour sur toi-même!", plusValue: 2, minusValue: -1 }
     ],
     mcq: [
         { question: "Quel est le plus grand océan du monde ?", answer: "L'océan Pacifique.", plusValue: 1, minusValue: -1 },
@@ -77,12 +77,12 @@ function displayRandomQuestionInModal(category, iframeId) {
     iframe.contentWindow.postMessage({ question: question.question, answer: question.answer, plusValue: question.plusValue, minusValue: question.minusValue }, "*");
 
     // Assurez-vous que plusValue est un nombre valide
-    // const plusValue = Number(question.plusValue);
+    const plusValue = Number(question.plusValue);
 
     // Mettre à jour les éléments question-number et question-number-minus avec les valeurs dynamiques
-    // document.getElementById('question').textContent = question.question;
-    // document.getElementById('question-number').textContent = question.plusValue;  
-    // document.getElementById('question-number-minus').textContent = question.plusValue; 
+    document.getElementById('question').textContent = question.question;
+    document.getElementById('question-number').textContent = question.plusValue;  
+    document.getElementById('question-number-minus').textContent = question.plusValue; 
 }
 
 

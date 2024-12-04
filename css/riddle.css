@@ -59,6 +59,7 @@ body {
     background-repeat: no-repeat; 
     flex-direction: column;
     transform: rotateY(180deg);
+    
 }
 
 .card.flipped .card-front {
@@ -94,7 +95,7 @@ h3 {
 }
 
 #answer {
-    color: #333;
+    color: white;
     text-align: center;
     padding: 20px;
     font-weight: bold;
