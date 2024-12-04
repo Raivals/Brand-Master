@@ -38,8 +38,8 @@ iframe {
 
 @media (max-width: 768px) {
     .modal-content {
-        top: 10%;
-        height: 70%;    
+        top: 0;
+        height: 95%;    
     }
 }
 

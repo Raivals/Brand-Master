@@ -93,12 +93,12 @@ button:hover {
     background-color: #88A346;
 }
 
-.timer-container {
+/* .timer-container {
     position: fixed;
     top: 35px;
     left: 10px;
     padding: 15px;
-}
+} */
 
 #timer-display {
     font-size: 30px;
@@ -147,15 +147,10 @@ button:hover {
     
     .timer-container {
         position: static; /* Le timer passe sous les cartes */
-        margin-top: 20px;
         padding: 10px;
     }
 
-    .timer-buttons {
-        flex-direction: column; /* Empilement des boutons en vertical */
-        gap: 10px;
-        align-items: center;
-    }
+    
 }
 
 @media (max-width: 480px) {
