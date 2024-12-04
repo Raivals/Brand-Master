@@ -23,7 +23,8 @@ const categories = {
     challenge: [
         { image: "../assets/dice.svg"},
         { image: "Relève ce défi et tu gagnes des points bonus."}
-    ]
+    ],
+   
 };
 
 // Suivi des questions affichées
@@ -116,6 +117,7 @@ document.getElementById('challenge-link').addEventListener('click', function () 
     displayRandomQuestionInModal('challenge', 'challenge-iframe');
     document.getElementById('challenge-modal').style.display = 'block';
 });
+
 
 // Ajouter des événements de fermeture pour chaque modal
 document.querySelectorAll('.close').forEach(function (closeButton) {

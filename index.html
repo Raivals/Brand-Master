@@ -45,6 +45,10 @@
             <img class="card" src="./assets/duel.svg" alt="Challenge">
         </a>
 
+        <a href="#" id="minigames-link">
+            <img class="card" src="./assets/Icons-09.png" alt="minigames logo">
+        </a>
+
         <a href="#" id="dice-link">
             <img class="card" src="./assets/dice.svg" alt="dice roll">
         </a>
@@ -52,7 +56,7 @@
         <a href="#" id="rules-link">
             <img class="card" src="./assets/riddle.png" alt="rules">
         </a>
-
+    
     </div>
 
     <!-- Modal pour Riddle -->
@@ -114,6 +118,13 @@
         <div class="modal-content">
             <span class="close" id="close-dice-modal">&times;</span>
             <iframe src="dice.html" id="dice-iframe"></iframe>
+        </div>
+    </div>
+    <!-- modal minigames -->
+     <div class="modal" id="minigames-modal">
+        <div class="modal-content">
+            <span class="close" id="close-dice-modal">&times;</span>
+            <iframe src="minigames.html" id="minigames-iframe"></iframe>
         </div>
     </div>
 
@@ -199,6 +210,32 @@
                 challengeModal.style.display = 'none';
             }
         });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    // Sélection des éléments
+    const minigamesLink = document.getElementById("minigames-link");
+    const minigamesModal = document.getElementById("minigames-modal");
+    const closeModal = document.getElementById("close-dice-modal");
+
+    // Fonction pour afficher le modal
+    minigamesLink.addEventListener("click", (event) => {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        minigamesModal.style.display = "block"; // Affiche le modal
+    });
+
+    // Fonction pour fermer le modal
+    closeModal.addEventListener("click", () => {
+        minigamesModal.style.display = "none"; // Cache le modal
+    });
+
+    // Fermer le modal en cliquant à l'extérieur de son contenu
+    window.addEventListener("click", (event) => {
+        if (event.target === minigamesModal) {
+            minigamesModal.style.display = "none";
+        }
+    });
+});
     </script>
 </body>
 </html>
