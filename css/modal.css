@@ -34,6 +34,7 @@ iframe {
     right: 20px;
     font-size: 30px; 
     cursor: pointer;
+    color: white;
 }
 
 @media (max-width: 768px) {

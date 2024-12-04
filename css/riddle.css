@@ -4,8 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #5c7987, #3a4c54);
     flex-direction: column; /* Alignement vertical des éléments */
+    color: white;
 }
 
 .card-container {
@@ -39,8 +40,9 @@ body {
 }
 
 .card-front {
-    background-color: #f9f9f9;
+    background-color: #5c7987 ;
     flex-direction: column;
+   
 }
 
 .card-back {

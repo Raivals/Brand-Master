@@ -5,8 +5,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
+    background: linear-gradient(to right, #5c7987, #3a4c54);
     height: 100vh;
+    color: white;
 }
 
 .navbar {
@@ -68,6 +69,7 @@ body {
     color: black;
     cursor: pointer;
     z-index: 1100;
+    color: white;
 }
 
 .close-icon {
