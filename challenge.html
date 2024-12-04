@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Master</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/challenge.css">
+    <link rel="stylesheet" href="./css/cards.css">
 </head>
 <body>
     <h1>Duel</h1>
@@ -13,8 +13,10 @@
     <div class="card-container">
         <div class="card" id="question-card">
             <div class="card-front">
-                <h3 id="question"></h3>
-                <p>"Click me to see the answer"</p>
+                <!-- <h3 id="question"></h3> -->
+                <img id="image1" src="./assets/dice.svg" style=" width: 150px; height: 150px" alt="Dice">
+                <img id="image2" src="./assets/pouce.svg" style=" width: 150px; height: 150px" alt="Chrono">
+                <img id="image3" src="./assets/rps.svg" style=" width: 150px; height: 150px" alt="Chrono">
                 <p id="question-number">+1</p>
                 <p id="question-number-minus">-1</p>
             </div>
@@ -28,11 +30,46 @@
             if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
 
             const data = event.data;
+            //  const imgElement = document.getElementById('question-image');
+            // imgElement.src = data.image;
+            // imgElement.style.display = "block";
             document.getElementById('question').textContent = data.question;
             document.getElementById('answer').textContent = data.answer;
             document.getElementById('question-number').textContent = data.plusValue;
             document.getElementById('question-number-minus').textContent = data.minusValue;
         });
+
+        //radomise pictures 
+
+        // Fonction pour afficher une image aléatoire
+function displayRandomImage() {
+    const images = [
+        document.getElementById("image1"),
+        document.getElementById("image2"),
+        document.getElementById("image3")
+    ];
+
+    // Masquer toutes les images
+    images.forEach(img => img.style.display = 'none');
+
+    // Afficher une image aléatoire
+    const randomIndex = Math.floor(Math.random() * images.length);
+    images[randomIndex].style.display = 'block';
+}
+
+// Écoute les messages envoyés par la page principale
+window.addEventListener('message', (event) => {
+    if (event.origin !== window.location.origin) return; // Sécuriser en vérifiant l'origine
+
+    const data = event.data;
+    if (data.command === 'randomizeImage') {
+        displayRandomImage();
+    }
+});
+
+// Afficher une image aléatoire au chargement initial
+displayRandomImage();
+
     </script>
 </body>
 </html>

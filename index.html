@@ -195,6 +195,39 @@
                 diceModal.style.display = 'none';
             }
         });
+
+        // img 
+
+        // Sélection des éléments de la modal
+        const challengeLink = document.getElementById('challenge-link');
+        const challengeModal = document.getElementById('challenge-modal');
+        const closeChallengeModal = challengeModal.querySelector('.close');
+        const challengeIframe = document.getElementById('challenge-iframe');
+
+        // Fonction pour demander à l'iframe de changer d'image
+        function sendRandomImageCommand() {
+            // Vérifie si l'iframe est chargée avant d'envoyer un message
+            challengeIframe.contentWindow.postMessage({ command: 'randomizeImage' }, '*');
+        }
+
+        // Ouvrir le modal et envoyer la commande pour changer d'image
+        challengeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            challengeModal.style.display = 'flex';
+            sendRandomImageCommand();
+        });
+
+        // Fermer le modal
+        closeChallengeModal.addEventListener('click', () => {
+            challengeModal.style.display = 'none';
+        });
+
+        // Fermer le modal si on clique en dehors du contenu
+        window.addEventListener('click', (e) => {
+            if (e.target === challengeModal) {
+                challengeModal.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>

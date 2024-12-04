@@ -21,8 +21,8 @@ const categories = {
         { question: "Sabote une action dans le jeu.", answer: "Action sabotée!", plusValue: -2, minusValue: -1 }
     ],
     challenge: [
-        { question: "Accepte ce défi et obtiens 5 points.", answer: "Défi accepté!", plusValue: 5, minusValue: -1 },
-        { question: "Relève ce défi et tu gagnes des points bonus.", answer: "Défi relevé!", plusValue: 3, minusValue: -1 }
+        { image: "../assets/dice.svg"},
+        { image: "Relève ce défi et tu gagnes des points bonus."}
     ]
 };
 
@@ -74,7 +74,7 @@ function displayRandomQuestionInModal(category, iframeId) {
     const iframe = document.getElementById(iframeId);
 
     // Injecter la question dans l'iframe
-    iframe.contentWindow.postMessage({ question: question.question, answer: question.answer, plusValue: question.plusValue, minusValue: question.minusValue }, "*");
+    iframe.contentWindow.postMessage({ question: question.question, answer: question.answer, plusValue: question.plusValue, minusValue: question.minusValue, image:question.image }, "*");
 
     // Assurez-vous que plusValue est un nombre valide
     const plusValue = Number(question.plusValue);
