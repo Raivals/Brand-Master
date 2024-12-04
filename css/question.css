@@ -67,7 +67,7 @@ a {
     .container {
         grid-template-columns: repeat(3, 1fr); 
         gap: 40px;
-        margin-top: -5rem;
+        margin-top: -8rem;
     }
      .card {
         height: 100px;
