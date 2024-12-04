@@ -16,10 +16,7 @@
                 <h3 id="question"></h3>
                 <p>"Click me to see the answer"</p>
                 <p id="question-number">+1</p>
-            </div>
-            <div class="card-back">
-                <h3 id="answer"></h3>
-                <p>"Click me to see the question"</p>
+                <p id="question-number-minus">-1</p>
             </div>
         </div>
     </div>
@@ -27,14 +24,15 @@
     <script src="./js/menu.js"></script>
     <script src="./js/questions.js"></script>
     <script>
-    window.addEventListener('message', function (event) {
-        if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
+        window.addEventListener('message', function (event) {
+            if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
 
-        const data = event.data;
-        document.getElementById('question').textContent = data.question;
-        document.getElementById('answer').textContent = data.answer;
-        document.getElementById('plus-value').textContent = `+${data.plusValue}`;
-    });
+            const data = event.data;
+            document.getElementById('question').textContent = data.question;
+            document.getElementById('answer').textContent = data.answer;
+            document.getElementById('question-number').textContent = data.plusValue;
+            document.getElementById('question-number-minus').textContent = data.minusValue;
+        });
     </script>
 </body>
 </html>

@@ -5,6 +5,7 @@ body {
     align-items: center;
     margin: 0;
     background: linear-gradient(to right, #5c7987, #3a4c54);
+    
     flex-direction: column; /* Alignement vertical des éléments */
     color: white;
 }
@@ -21,6 +22,7 @@ body {
     margin-bottom: 20px;
     cursor: pointer;
     padding: 10px;
+    
 }
 
 .card-front, .card-back {
@@ -33,20 +35,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color:  #5c7987;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.6s ease-in-out;
+    
 }
 
 .card-front {
-    background-color: #5c7987 ;
+    /* background-color: #5c7987 ; */
+    background-image: url(../assets/Plan\ de\ travail\ 3\ copie.svg);
+    background-size:contain; 
+    background-position: 1ch -10ch;
+    background-repeat: no-repeat; 
     flex-direction: column;
    
 }
 
 .card-back {
-    background-color: #e0f7fa;
+    background-image: url(../assets/Plan\ de\ travail\ 3\ copie.svg);
+    background-size:contain; 
+    background-position: 1ch -10ch;
+    background-repeat: no-repeat; 
     flex-direction: column;
     transform: rotateY(180deg);
 }
@@ -61,6 +71,7 @@ body {
 
 h3 {
     margin: 20px 0;
+    font-size: 15px;
 }
 
 #question-number {
@@ -69,6 +80,15 @@ h3 {
     bottom: 0;
     right: 20px;
     color: #4CAF50;
+    font-weight: bold;
+}
+
+#question-number-minus {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: -2px;
+    left: 20px; 
+    color: #F44336;
     font-weight: bold;
 }
 
@@ -132,6 +152,12 @@ button:hover {
 
 /* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
+    .card-front {
+        background-position: 1ch -6ch;
+    }
+    .card-back {
+        background-position: 1ch -6ch;
+    }
     .card-container {
         display: flex;
         flex-direction: column; /* Alignement vertical pour les petits écrans */

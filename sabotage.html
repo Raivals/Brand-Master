@@ -14,6 +14,8 @@
         <div class="card" id="question-card">
             <div class="card-front">
                 <h3 id="question"></h3>
+                <p id="question-number"></p>
+                <p id="question-number-minus"></p>
             </div>
         </div>
     </div>
@@ -27,7 +29,18 @@
         const data = event.data;
         document.getElementById('question').textContent = data.question;
         document.getElementById('answer').textContent = data.answer;
-        document.getElementById('plus-value').textContent = `+${data.plusValue}`;
+        document.getElementById('question-number').textContent = data.plusValue;
+        document.getElementById('question-number-minus').textContent = data.minusValue;
+    });
+    // Attendez que le DOM soit prêt
+    document.addEventListener('DOMContentLoaded', function () {
+        const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
+        
+        // Ajoutez un gestionnaire d'événements au clic
+        card.addEventListener('click', function () {
+            // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
+            card.classList.toggle('flipped');
+        });
     });
     </script>
   

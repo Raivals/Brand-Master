@@ -69,6 +69,15 @@ h3 {
     color: #4CAF50;
     font-weight: bold;
 }
+#question-number-minus {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: -2px;
+    left: 20px; 
+    color: #F44336;
+    font-weight: bold;
+}
+
 
 #answer {
     color: #333;

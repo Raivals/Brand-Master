@@ -16,7 +16,8 @@
             <div class="card-front">
                 <h3 id="question"></h3>
                 <p>"Click me to see the answer"</p>
-                <p id="question-number">+1</p>
+                <p id="question-number"></p>
+                <p id="question-number-minus"></p>
             </div>
             <div class="card-back">
                 <h3 id="answer"></h3>
@@ -35,25 +36,26 @@
 
     <script src="./js/menu.js"></script>
     <script src="./js/questions.js"></script>
-     <script>
-    window.addEventListener('message', function (event) {
-        if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
+    <script>
+        window.addEventListener('message', function (event) {
+            if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
 
-        const data = event.data;
-        document.getElementById('question').textContent = data.question;
-        document.getElementById('answer').textContent = data.answer;
-        document.getElementById('plus-value').textContent = `+${data.plusValue}`;
-    });
-    // Attendez que le DOM soit prêt
-    document.addEventListener('DOMContentLoaded', function () {
-        const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
-        
-        // Ajoutez un gestionnaire d'événements au clic
-        card.addEventListener('click', function () {
-            // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
-            card.classList.toggle('flipped');
+            const data = event.data;
+            document.getElementById('question').textContent = data.question;
+            document.getElementById('answer').textContent = data.answer;
+            document.getElementById('question-number').textContent = data.plusValue;
+            document.getElementById('question-number-minus').textContent = data.minusValue;
         });
-    });
+        // Attendez que le DOM soit prêt
+        document.addEventListener('DOMContentLoaded', function () {
+            const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
+            
+            // Ajoutez un gestionnaire d'événements au clic
+            card.addEventListener('click', function () {
+                // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
+                card.classList.toggle('flipped');
+            });
+        });
     </script>
     <script>
     // Gestion du timer

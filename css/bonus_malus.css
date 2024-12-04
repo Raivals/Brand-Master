@@ -64,12 +64,12 @@ h3 {
     font-weight: bold;
 }
 
-#question-minus {
+#question-number-minus {
     font-size: 1.5rem;
     position: absolute;
-    top: 0;
-    left: 20px;
-    color: red;
+    bottom: -2px;
+    left: 20px; 
+    color: #F44336;
     font-weight: bold;
 }
 
