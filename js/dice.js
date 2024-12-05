@@ -3,7 +3,7 @@ const rollButton = document.getElementById('roll-button');
 
 // Création de la scène et de la caméra
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff); // Fond blanc
+scene.background = new THREE.Color("#f0e7b1"); // Fond modifié
 const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(400, 400);

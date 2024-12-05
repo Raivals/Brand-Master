@@ -10,67 +10,6 @@ body {
     color: white;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #333;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.navbar .menu {
-    margin: 0;
-    padding: 20px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 80px;
-}
-
-.navbar .menu ul {
-    padding: 0;
-    margin-top: 80px;
-}
-
-.navbar .menu li {
-    margin: 5px 0;
-    list-style-type: none;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.navbar .menu a {
-    transition: background-color 0.2s ease, border-radius 0.2s ease; 
-}
-
-.navbar .menu a:hover {
-    background-color: #97B652;
-    border-radius: 10px;
-}
-
-.navbar .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px;
-}
-
-.hamburger {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    font-size: 2em;
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    z-index: 1100;
-    color: white;
-}
 
 .close-icon {
     position: absolute;
@@ -111,7 +50,7 @@ button {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 1.2rem;
-    background-color: #97B652;
+    background-color: #f59b21;
     color: white;
     font-weight: bold;
     border: none;
@@ -120,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: #97B652;
+    background-color: #f59b21;
 }
 
 
