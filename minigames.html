@@ -4,27 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Master</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cards.css">
+    <style>
+        /* Styles pour gérer le défilement des images */
+        .image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .image-list {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-list img {
+            width: 100px;  /* Taille des images */
+            height: auto;
+            margin-right: 10px; /* Un peu d'espace entre les images */
+        }
+    </style>
 </head>
 <body>
-    <h2>Minigames</h2>
+    <h2>Minigame Challenge</h2>
 
-    <div class="card-container">
-        <div class="card" id="question-card">
-            <div class="card-front">
-                <h3>Minigame rules :</h3>
-                <ul style="margin: 0; padding: 0;">
-                    <li style="font-size: 0.8rem; font-weight: bold; text-align: start; display: flex; align-items: center;"> <i><img style="width: 40px;" src="./assets/rps.svg" alt=""/></i>Rock, Paper, Scissors best of 3</li>
-                    <li style="font-size: 0.8rem; font-weight: bold; text-align: start; display: flex; align-items: center;"><i><img style="width: 40px;" src="./assets/pouce.svg" alt=""/></i>Thumb fight, best of 1 </li>
-                    <li style="font-size: 0.8rem; font-weight: bold; text-align: start; display: flex; align-items: center;"><i><img style="width: 40px;" src="./assets/dice.svg" alt=""/></i>Roll the dice, best of 1</li>
-                </ul>
-                
-            </div>
+    <div class="image-container">
+        <div class="image-list" id="image-list">
+            <img src="./assets/rps.svg" alt="Rock Paper Scissors">
+            <img src="./assets/pouce.svg" alt="Thumb Fight">
+            <img src="./assets/dice.svg" alt="Roll the Dice">
         </div>
     </div>
 
-    <script src="./js/menu.js"></script>
-    <script src="./js/questions.js"></script>
+    <script>
+        // Variable pour l'index actuel de l'image
+        let currentIndex = 0;
+        const imageList = document.getElementById('image-list');
+        const images = imageList.getElementsByTagName('img');
+
+        // Fonction pour changer l'image affichée
+        function changeImage() {
+            // Incrémenter l'index pour changer l'image
+            currentIndex = (currentIndex + 1) % images.length;  // Boucle entre les images
+            const offset = -currentIndex * 100; // Déplacer les images pour "faire défiler"
+            imageList.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Réception du message depuis la page principale
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) return;  // Sécurisation
+
+            const data = event.data;
+            if (data.command === 'randomizeImage') {
+                changeImage();  // Changer l'image
+            }
+        });
+    </script>
 </body>
 </html>
