@@ -6,6 +6,18 @@
     <title>Brand Master</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cards.css">
+    <style>
+        #options-list {
+            margin: 0;
+            padding: 0;
+        }
+        #options-list li {
+            font-size: 0.8rem;
+            text-align: start;
+            font-weight: bold;
+            margin:8px 5px 0 5px;
+        }
+    </style>
 </head>
 <body>
     <h2>Quiz</h2>
@@ -13,7 +25,8 @@
     <div class="card-container">
         <div class="card" id="question-card">
             <div class="card-front">
-                <h3 id="question"></h3>
+                <h3 id="main-question"></h3> <!-- Affiche la question principale -->
+                <ul id="options-list" style="text-align: start; margin-left: 20px;"></ul> <!-- Affiche les options -->
                 <p>"Click me to see the answer"</p>
                 <p id="question-number"></p>
                 <p id="question-number-minus"></p>
@@ -32,11 +45,30 @@
             if (event.origin !== window.location.origin) return; // Sécuriser la réception des messages
 
             const data = event.data;
-            document.getElementById('question').textContent = data.question;
+
+            // Utiliser une expression régulière pour diviser le texte après chaque '?' ou '.'
+            const questionParts = data.question.split(/[?.]/).filter(part => part.trim() !== ""); // Supprimer les parties vides
+
+            const mainQuestion = questionParts.shift().trim() + '?'; // La première partie devient la question principale
+            const optionsList = questionParts; // Les parties restantes deviennent des options
+
+            document.getElementById('main-question').textContent = mainQuestion;
+
+            const optionsContainer = document.getElementById('options-list');
+            optionsContainer.innerHTML = ''; // Réinitialiser la liste existante
+
+            // Ajouter chaque option sous forme de liste
+            optionsList.forEach(option => {
+                const li = document.createElement('li');
+                li.textContent = option.trim(); // Supprimer les espaces inutiles autour des options
+                optionsContainer.appendChild(li);
+            });
+
             document.getElementById('answer').textContent = data.answer;
             document.getElementById('question-number').textContent = data.plusValue;
             document.getElementById('question-number-minus').textContent = data.minusValue;
         });
+
         // Attendez que le DOM soit prêt
         document.addEventListener('DOMContentLoaded', function () {
             const card = document.getElementById('question-card'); // Sélectionnez la carte par son id
@@ -48,6 +80,5 @@
             });
         });
     </script>
-  
 </body>
 </html>

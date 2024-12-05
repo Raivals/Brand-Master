@@ -5,92 +5,27 @@ const categories = {
         { question: "", answer: "", plusValue: 1, minusValue: -1 },
         { question: "", answer: "", plusValue: 1, minusValue: -1 },
         { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 2, minusValue: -1 }
+        { question: "", answer: "", plusValue: 1, minusValue: -1 }
     ],
     bonus_malus: [
         { question: "", answer: "", plusValue: 3, minusValue: -1 },
         { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 2, minusValue: -1 }
+        { question: "", answer: "", plusValue: 3, minusValue: -1 }
     ],
     action: [
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "The one and only why played can read this card", answer: "", plusValue: 2, minusValue: -1 }
+        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 }
     ],
     mcq: [
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 1, minusValue: -1 },
-        { question: "", answer: "", plusValue: 2, minusValue: -1 }
+        { question: "What is the english for test ? Tut of street. Tot salut c moi test pour voir si ça. Pouet", answer: "test", plusValue: 1, minusValue: -1 }
     ],
     sabotage: [
         { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -1, minusValue: -1 },
-        { question: "", answer: "", plusValue: -2, minusValue: -1 }
+        { question: "", answer: "", plusValue: -1, minusValue: -1 }
     ],
     challenge: [
-        { image: "../assets/dice.svg"},
-        { image: "Relève ce défi et tu gagnes des points bonus."}
-    ],
-   
+        { image: "../assets/dice.svg" },
+        { image: "Relève ce défi et tu gagnes des points bonus." }
+    ]
 };
 
 // Suivi des questions affichées
@@ -133,25 +68,49 @@ function getRandomQuestion(category) {
     return randomQuestion;
 }
 
-// Fonction pour afficher une question aléatoire dans un iframe
+// Fonction pour afficher une question aléatoire dans un modal ou iframe
 function displayRandomQuestionInModal(category, iframeId) {
     const question = getRandomQuestion(category);
 
-
+    // Trouver l'iframe pour injecter la question
     const iframe = document.getElementById(iframeId);
 
     // Injecter la question dans l'iframe
-    iframe.contentWindow.postMessage({ question: question.question, answer: question.answer, plusValue: question.plusValue, minusValue: question.minusValue, image:question.image }, "*");
+    iframe.contentWindow.postMessage({
+        question: question.question,
+        answer: question.answer,
+        plusValue: question.plusValue,
+        minusValue: question.minusValue,
+        image: question.image
+    }, "*");
 
-    // Assurez-vous que plusValue est un nombre valide
-    const plusValue = Number(question.plusValue);
+    // Gérer l'affichage spécifique à la catégorie "mcq"
+    const questionElement = document.getElementById('question');
+    questionElement.innerHTML = ''; // Réinitialiser le contenu
+
+    if (category === 'mcq') {
+        // Extraire les options de la question
+        const [mainQuestion, ...options] = question.question.split(' ');
+        const ul = document.createElement('ul');
+
+        options.forEach(option => {
+            const li = document.createElement('li');
+            li.textContent = option;
+            ul.appendChild(li);
+        });
+
+        // Ajouter la question principale suivie des options
+        questionElement.innerHTML = mainQuestion + ':';
+        questionElement.appendChild(ul);
+    } else {
+        // Pour les autres catégories, afficher la question normalement
+        questionElement.textContent = question.question;
+    }
 
     // Mettre à jour les éléments question-number et question-number-minus avec les valeurs dynamiques
-    document.getElementById('question').textContent = question.question;
-    document.getElementById('question-number').textContent = question.plusValue;  
-    document.getElementById('question-number-minus').textContent = question.plusValue; 
+    document.getElementById('question-number').textContent = question.plusValue;
+    document.getElementById('question-number-minus').textContent = question.plusValue;
 }
-
 
 // Ajouter des événements pour chaque modal pour afficher une question aléatoire
 document.getElementById('riddle-link').addEventListener('click', function () {
@@ -183,7 +142,6 @@ document.getElementById('challenge-link').addEventListener('click', function () 
     displayRandomQuestionInModal('challenge', 'challenge-iframe');
     document.getElementById('challenge-modal').style.display = 'block';
 });
-
 
 // Ajouter des événements de fermeture pour chaque modal
 document.querySelectorAll('.close').forEach(function (closeButton) {
