@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    padding: 5rem;
 }
 
 
@@ -62,6 +63,11 @@ a {
     color: inherit;
 }
 
+.logo {
+    width: 30vw;
+    margin: 5rem;
+}
+
 
 @media (max-width: 1024px) {
     body {
@@ -70,40 +76,21 @@ a {
     .container {
         grid-template-columns: repeat(3, 1fr); 
         gap: 40px;
-        margin-top: -8rem;
+        margin-top: -2rem;
     }
      .card {
         height: 100px;
      }
-    /* .card {
-        height: 250px; /
-    } */
 }
 
 
 @media (max-width: 768px) {
-    /* .container {
-        grid-template-columns: 1fr;
-        height: 80%;
-    } */
-
-    /* .card {
-        height: 200px;
-        padding: 15px;
-        width: 200px;
-        margin: auto;
-    } */
-
-    /* .card img {
-        width: 80px;
-        height: 80px;
-    } */
-
-    /* .card h3 {
-        font-size: 1rem;
+    
+    body {
+        padding: 0;
     }
+    .logo {
+        width: 80vw;
 
-    .card p {
-        font-size: 0.8rem; 
-    } */
+    }
 }
