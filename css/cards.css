@@ -128,6 +128,7 @@ button:hover {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    margin: 0 !important;
 }
 
 .timer-buttons {
@@ -146,6 +147,7 @@ button:hover {
     background-color: #97B652;
     color: white;
     text-align: center;
+    margin: 0 !important;
 }
 
 .timer-buttons button:hover {
@@ -155,10 +157,10 @@ button:hover {
 /* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
     body {
-        margin-top: 20%;
+        margin-top: 15%;
     }
     .card-front {
-        background-position: 0-8ch;
+        background-position: 0 -8ch;
     }
     .card-back {
         background-position: 0 -8ch;
