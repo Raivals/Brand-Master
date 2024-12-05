@@ -157,7 +157,7 @@ button:hover {
 /* Styles spécifiques pour les petits écrans */
 @media (max-width: 768px) {
     body {
-        margin-top: 15%;
+        margin-top: 8%;
     }
     .card-front {
         background-position: 0 -8ch;
