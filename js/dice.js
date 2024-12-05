@@ -9,6 +9,25 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(400, 400);
 canvasContainer.appendChild(renderer.domElement);
 
+// Chargement de l'image de fond
+const textureLoader = new THREE.TextureLoader();
+const backgroundTexture = textureLoader.load('assets/rdv.svg', (texture) => {
+    // Redimensionner la texture pour qu'elle s'adapte bien au plan
+    texture.minFilter = THREE.LinearFilter;  // Pour éviter les artefacts sur les textures
+    texture.generateMipmaps = false;
+});
+
+// Création d'un plan géant pour l'arrière-plan (encore plus grand)
+const backgroundGeometry = new THREE.PlaneGeometry(8, 8); // Taille augmentée du plan pour qu'il couvre tout l'arrière-plan
+const backgroundMaterial = new THREE.MeshBasicMaterial({
+    map: backgroundTexture,
+    side: THREE.DoubleSide, // Pour que l'image soit visible de l'autre côté aussi
+    transparent: true, // Pour gérer la transparence
+});
+const backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
+backgroundMesh.position.z = -1; // Positionner l'image en arrière de la scène
+scene.add(backgroundMesh);
+
 // Suivi du chargement des textures
 let texturesLoaded = 0;
 const totalTextures = 6; // Nombre total de textures
