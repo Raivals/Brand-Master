@@ -10,6 +10,17 @@ function closeModal() {
     modals.forEach(modal => {
         modal.style.display = "none";
     });
+
+    // Réinitialiser la carte
+    resetCard();
+}
+
+// Fonction pour remettre la carte sur le côté "front"
+function resetCard() {
+    const card = document.getElementById('question-card');
+    if (card && card.classList.contains('flipped')) {
+        card.classList.remove('flipped'); // Retirer la classe "flipped"
+    }
 }
 
 // Ajouter un événement pour chaque lien de catégorie
@@ -50,6 +61,8 @@ window.onclick = function (event) {
     modals.forEach(function (modal) {
         if (event.target === modal) {
             modal.style.display = "none";
+            // Réinitialiser la carte
+            resetCard();
         }
     });
 };
