@@ -77,8 +77,19 @@
             card.addEventListener('click', function () {
                 // Ajoutez ou retirez la classe "flipped" lors du clic sur la carte
                 card.classList.toggle('flipped');
+                
+                // Si la carte est retournée (verso), démarrer un délai de 3 secondes pour la retourner
+                if (card.classList.contains('flipped')) {
+                    setTimeout(function () {
+                        // Vérifier si la carte est toujours retournée (verso), et si oui, la retourner (flipped)
+                        if (card.classList.contains('flipped')) {
+                            card.classList.remove('flipped'); // Reflip vers le recto
+                        }
+                    }, 3000); // Délai de 3 secondes
+                }
             });
         });
+
     </script>
 </body>
 </html>
