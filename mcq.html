@@ -33,7 +33,7 @@
             </div>
             <div class="card-back">
                 <h3 id="answer"></h3>
-                <p>"Click me to see the question"</p>
+                <p>"Click me before close"</p>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
             const data = event.data;
 
             // Utiliser une expression régulière pour diviser le texte après chaque '?' ou '.'
-            const questionParts = data.question.split(/[?.]/).filter(part => part.trim() !== ""); // Supprimer les parties vides
+            const questionParts = data.question.split(/[?/]/).filter(part => part.trim() !== ""); // Supprimer les parties vides
 
             const mainQuestion = questionParts.shift().trim() + '?'; // La première partie devient la question principale
             const optionsList = questionParts; // Les parties restantes deviennent des options
