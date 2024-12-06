@@ -68,6 +68,14 @@ a {
     margin: 5rem;
 }
 
+.action .card-front {
+    background-image: url('../assets/action.png');
+}
+
+.action .card-back {
+    background-image: url('../assets/action.png');
+}
+
 
 @media (max-width: 1024px) {
     body {

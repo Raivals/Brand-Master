@@ -8,12 +8,14 @@ const categories = {
         { question: "", answer: "", plusValue: 1, minusValue: -1 }
     ],
     bonus_malus: [
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 },
-        { question: "", answer: "", plusValue: 3, minusValue: -1 }
+        { question: "Your Adobe Illustrator crashes unexpectedly! Skip your next turn as you recover your work.", answer: "", plusValue: "", minusValue: "" },
+        { question: "A sudden spark of genius strikes! Move forward 3 circles and play the activity on the add-on.", answer: "", plusValue: "", minusValue: "" },
+        { question: "Your client rejects your design due to the wrong color palette. Move back 2 circles and skip the activity on the new circle.", answer: "", plusValue: "", minusValue: "" },
+        { question: "You successfully register your brand trademark. Jump directly to the next orange (duel) circle and challenge a player.", answer: "", plusValue: "", minusValue: "" },
+        { question: "You finally nail the DPI and PPI alignment for a perfect print! Roll the dice again and move forward the full value.", answer: "", plusValue: "", minusValue: "" },
     ],
     action: [
-        { question: "The one and only why played can read this card", answer: "", plusValue: 1, minusValue: -1 }
+        { question: "The one and only who played can read this card", answer: "", plusValue: 1, minusValue: -1 }
     ],
     mcq: [
         { question: "What is the english for test ? Tut of street. Tot salut c moi test pour voir si ça. Pouet", answer: "test", plusValue: 1, minusValue: -1 }
@@ -22,10 +24,10 @@ const categories = {
         { question: "", answer: "", plusValue: -1, minusValue: -1 },
         { question: "", answer: "", plusValue: -1, minusValue: -1 }
     ],
-    challenge: [
-        { image: "../assets/dice.svg" },
-        { image: "Relève ce défi et tu gagnes des points bonus." }
-    ]
+    // challenge: [
+    //     { image: "../assets/dice.svg" },
+    //     { image: "Relève ce défi et tu gagnes des points bonus." }
+    // ]
 };
 
 // Suivi des questions affichées
